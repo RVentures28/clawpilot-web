@@ -1,14 +1,23 @@
+import Image from 'next/image';
+
 export function LogoMark({ className = '' }: { className?: string }) {
-  // Placeholder mark: we'll replace with plane+claw SVG once you approve direction.
   return (
     <div
       className={
-        'h-8 w-8 rounded-xl border border-white/10 bg-white/5 shadow-soft backdrop-blur ' +
+        'relative h-8 w-8 overflow-hidden rounded-xl border border-white/10 bg-white/5 shadow-soft ' +
         className
       }
       aria-label="ClawPilot"
       title="ClawPilot"
-    />
+    >
+      <Image
+        src="/brand/logo-mark.svg"
+        alt="ClawPilot"
+        fill
+        className="object-cover"
+        priority
+      />
+    </div>
   );
 }
 
