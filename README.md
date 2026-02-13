@@ -30,3 +30,6 @@ npm run dev
 ## Deploy (Vercel)
 
 Add the same env vars in Vercel project settings.
+
+## Deploy status
+If Vercel shows old commit, reconnect Git integration.
