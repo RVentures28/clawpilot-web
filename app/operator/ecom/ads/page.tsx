@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Button } from '../../../../components/button';
 import { Input, Label, Textarea } from '../../../../components/input';
 import { ResultRenderer } from '../../../../components/results/result-renderer';
-import { runMock } from '../../../../lib/mockEngine';
 
 export default function Ads() {
   const [product, setProduct] = useState('');

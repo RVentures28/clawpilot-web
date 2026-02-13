@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { Button } from '../../../../components/button';
 import { Input, Label } from '../../../../components/input';
 import { ResultRenderer } from '../../../../components/results/result-renderer';
-import { runMock } from '../../../../lib/mockEngine';
 
 export default function Discover() {
   const [niche, setNiche] = useState('');
