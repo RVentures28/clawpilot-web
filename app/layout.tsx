@@ -1,8 +1,10 @@
+import './globals.css';
 import type { Metadata } from 'next';
+import { Topbar } from '../components/topbar';
 
 export const metadata: Metadata = {
   title: 'ClawPilot',
-  description: 'RVentures28 — ClawPilot'
+  description: 'Operator-as-a-Service by RVentures'
 };
 
 export default function RootLayout({
@@ -12,8 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif', margin: 0 }}>
-        {children}
+      <body className="min-h-screen text-white/90 antialiased">
+        <Topbar />
+        <div className="mx-auto max-w-6xl px-6 py-10">
+          {children}
+        </div>
       </body>
     </html>
   );
