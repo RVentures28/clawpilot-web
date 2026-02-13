@@ -77,6 +77,28 @@ export default function Landing() {
       <section className="rounded-2xl border border-white/10 bg-bg-panel/50 p-8">
         <div className="grid gap-6 lg:grid-cols-3">
           <div>
+            <div className="text-xs uppercase tracking-widest text-white/40">Pricing</div>
+            <div className="mt-2 text-lg font-semibold">49€ platform + usage-based Operator Spend</div>
+            <p className="mt-2 text-sm text-white/60">
+              No credit confusion. Set a max spend per run. Pay only for real work executed.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-bg-panel/60 p-5">
+            <div className="text-sm font-semibold">Starter</div>
+            <div className="mt-1 text-2xl font-semibold">49€ <span className="text-sm text-white/40">/mo</span></div>
+            <div className="mt-3 text-sm text-white/60">1 operator at a time • workspace • templates</div>
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-bg-panel/60 p-5">
+            <div className="text-sm font-semibold">Pro</div>
+            <div className="mt-1 text-2xl font-semibold">99€ <span className="text-sm text-white/40">/mo</span></div>
+            <div className="mt-3 text-sm text-white/60">faster execution • more operators • higher limits</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-2xl border border-white/10 bg-bg-panel/50 p-8">
+        <div className="grid gap-6 lg:grid-cols-3">
+          <div>
             <div className="text-xs uppercase tracking-widest text-white/40">How it feels</div>
             <div className="mt-2 text-lg font-semibold">Stripe × Linear × Apple</div>
             <p className="mt-2 text-sm text-white/60">

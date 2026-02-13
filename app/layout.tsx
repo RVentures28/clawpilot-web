@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Topbar } from '../components/topbar';
+import { ToastProvider } from '../components/ux/toast';
 
 export const metadata: Metadata = {
   title: 'ClawPilot',
@@ -18,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen text-white/90 antialiased">
-        <Topbar />
-        <div className="mx-auto max-w-6xl px-6 py-10">{children}</div>
+        <ToastProvider>
+          <Topbar />
+          <div className="mx-auto max-w-6xl px-6 py-10">{children}</div>
+        </ToastProvider>
       </body>
     </html>
   );

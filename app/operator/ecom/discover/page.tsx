@@ -1,12 +1,17 @@
 'use client';
 
 import { useState } from 'react';
+import { useToast } from '../../../../components/ux/toast';
+import { BudgetCap } from '../../../../components/ux/budget-cap';
 import { Button } from '../../../../components/button';
 import { Input, Label } from '../../../../components/input';
 import { ResultRenderer } from '../../../../components/results/result-renderer';
 
 export default function Discover() {
   const [niche, setNiche] = useState('');
+  const [budget, setBudget] = useState('');
+  const [loading, setLoading] = useState(false);
+  const { push } = useToast();
   const [result, setResult] = useState<null | { title: string; blocks: any[] }>(null);
 
   return (
@@ -21,8 +26,10 @@ export default function Discover() {
           <Input value={niche} onChange={setNiche} placeholder="e.g. fitness gadgets" />
         </div>
 
+        <BudgetCap value={budget} onChange={setBudget} />
+
         <div className="mt-6 flex gap-2">
-          <Button onClick={() => setResult(runMock('ecom_discover', { niche }))}>Run</Button>
+          <Button loading={loading} onClick={() => setResult(runMock('ecom_discover', { niche }))}>Run</Button>
           <Button className="bg-transparent" onClick={() => setResult(null)}>
             Clear
           </Button>
