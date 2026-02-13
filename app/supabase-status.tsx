@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getSupabaseClient } from '@/lib/supabaseClient';
+import { getSupabaseClient } from '../lib/supabaseClient';
 
 export function SupabaseStatus() {
   const [status, setStatus] = useState<'checking' | 'ok' | 'missing-env' | 'error'>('checking');
